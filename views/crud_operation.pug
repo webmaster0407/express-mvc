@@ -1,0 +1,31 @@
+doctype html 
+html 
+    head 
+        title CRUD Operation 
+        link(rel = "stylesheet" href = "/stylesheets/style.css")
+    body 
+        if({editData} != '')
+            h1 CrudOperation 
+            h3 This is View page 
+            h4 Create Data 
+            form(action = "/crud/edit" + {editId}   method = "post")
+                input(type = "submit" value = "Update Data" ) 
+        else 
+            h1 CrudOperation 
+            h3 This is View Page 
+            h4 Create Data 
+            form(action = "/crud/create" method = "post")
+                input(type = "submit" value="CreateData"  )
+        br
+        br
+        table 
+            tr 
+                th
+                    a(href = "/crud/form") Crud Form
+                th
+                    a(href = "/crud/fetch") Fetch Data              
+                th
+                    a(href = "/crud/edit/5") Edit Data           
+                th
+                    a(href = "/crud/delete/5") Delete Data
+        
